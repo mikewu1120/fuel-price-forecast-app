@@ -16,6 +16,7 @@ End-to-end pipeline for **STAT 418**: pull weekly U.S. gasoline prices (or synth
 |------|---------|
 | `scripts/collect.py` | Download EIA JSON → `data/raw/gasoline_weekly.csv` |
 | `scripts/train.py` | Feature engineering → `data/processed/gasoline_modeling.csv` + `models/xgboost.joblib` + `models/sarima.joblib` |
+| `notebooks/eda_preprocessing.ipynb` | EDA, data quality checks, preprocessing explanation, and model evaluation summary |
 | `app_lib/models.py` | Train / forecast XGBoost (recursive lags) and SARIMA (direct multi-step) |
 | `app_lib/features.py` | Lag features, training helper, recursive forecast |
 | `api/app.py` | Flask API (`/health`, `/metadata`, `/predict`) |
